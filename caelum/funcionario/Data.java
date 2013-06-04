@@ -4,4 +4,16 @@ class Data{
     void mostraData(){
         System.out.println(dia + "/" + mes + "/"+ ano);
     }
+
+    void anoQueVem(){
+        ano = ano + 1;
+    }
+
+    void semanaQueVem(){
+        dia = dia +7;
+    }
+
+    void mesQueVem(){
+        mes = mes +1;
+    }
 }

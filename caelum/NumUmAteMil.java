@@ -1,6 +1,8 @@
 // exercicios imprimir a soma de 1 até 1000
 class NumUmAteMil {
-    public static void main(String[]args){
+    int num, div, som, resultado, sub;
+
+    void somaUmAteMil(){
         int num = 0;
         int parc = 0;
         while (num <= 1000){
@@ -9,6 +11,18 @@ class NumUmAteMil {
         num = num +1;
         }
 
+    }
+
+    void dividirNum(){
+        resultado = num / div;
+    }
+
+    void somarNum(){
+        resultado = num + som;
+    }
+
+    void subtrairNUm(){
+        resultado = num - sub;
     }
 }
 

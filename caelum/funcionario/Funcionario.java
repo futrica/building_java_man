@@ -19,4 +19,7 @@ class Funcionario {
         System.out.println(salario);
     }
 
+    void mostrarDepartamento(){
+        System.out.println(departamento);
+    }
 }
