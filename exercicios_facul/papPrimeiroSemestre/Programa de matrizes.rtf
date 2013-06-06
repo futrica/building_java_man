@@ -1,0 +1,177 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1046{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\lang22\f0\fs22 import java.util.Scanner;\par
+\par
+public class DeterminanteQuadrado \{\par
+       public static void main(String[] args) \{\par
+        Scanner entrada = new Scanner(System.in);\par
+ \par
+        System.out.println("Bem vindo. Esta \'e9 uma calculadora de determinantes.");\par
+        System.out.println("Esta calculadora calcula determinantes de matrizes 2x2, 3x3 e 4x4.");\par
+        System.out.println("Para fechar a calculadora, digite 1.");\par
+        System.out.println("Para calcular a determinante de uma matriz 2x2, digite 2. Uma matriz 3x3, digite 3.");\par
+ \par
+        int tipoDaMatriz;\par
+        tipoDaMatriz = entrada.nextInt();\par
+ \par
+        if (tipoDaMatriz == 1) \{\par
+            System.out.println("Fechando a calculadora");\par
+        \} else \{\par
+            if (tipoDaMatriz == 2) \{\par
+                System.out.println("Voc\'ea escolheu calcular a determinante de uma matriz 2x2.");\par
+ \par
+                System.out.println("Qual o termo a11 da matriz?");\par
+ \par
+                double mdxdUmUm;\par
+                mdxdUmUm = entrada.nextInt();\par
+ \par
+                System.out.println("Qual o termo a12 da matriz?");\par
+ \par
+                double mdxdUmDois;\par
+                mdxdUmDois = entrada.nextInt();\par
+ \par
+                System.out.println("Qual o termo a21 da matriz?");\par
+ \par
+                double mdxdDoisUm;\par
+                mdxdDoisUm = entrada.nextInt();\par
+ \par
+                System.out.println("Qual o termo a22 da matriz?");\par
+ \par
+                double mdxdDoisDois;\par
+                mdxdDoisDois = entrada.nextInt();\par
+ \par
+                System.out.println("A matriz 2x2 escolhida \'e9 a matriz [" + mdxdUmUm + " " + mdxdUmDois + "]");\par
+                System.out.println("                                  [" + mdxdDoisUm + " " + mdxdDoisDois + "].");\par
+ \par
+                double determinanteDxDPrimaria;\par
+                determinanteDxDPrimaria = (mdxdUmUm * mdxdUmDois);\par
+               \par
+                double determinanteDxDSecundaria;\par
+                determinanteDxDSecundaria = (mdxdDoisUm * mdxdDoisDois);\par
+               \par
+                double  determinanteDxDFinal;\par
+                determinanteDxDFinal = (determinanteDxDPrimaria - determinanteDxDSecundaria);\par
+ \par
+                System.out.println("A determinante da matriz 2x2 escolhida \'e9 " + determinanteDxDFinal + ".");\par
+ \par
+            \} else \{\par
+                if (tipoDaMatriz == 3) \{\par
+                    System.out.println("Voc\'ea escolheu calcular a determinante de uma matriz 3x3.");\par
+ \par
+                    System.out.println("Qual o termo a11 da matriz?");\par
+ \par
+                    double mtxtUmUm;\par
+                    mtxtUmUm = entrada.nextInt();\par
+ \par
+                    System.out.println("Qual o termo a12 da matriz?");\par
+ \par
+                    double mtxtUmDois;\par
+                    mtxtUmDois = entrada.nextInt();\par
+ \par
+                    System.out.println("Qual o termo a13 da matriz?");\par
+ \par
+                    double mtxtUmTres;\par
+                    mtxtUmTres = entrada.nextInt();\par
+ \par
+                    System.out.println("A primeira linha da matriz \'e9 [" + mtxtUmUm + " " + mtxtUmDois + " " + mtxtUmTres + "]?");\par
+                    System.out.println("Se a linha acima estiver certa, digite 1. Caso n\'e3o, digite 2.");\par
+ \par
+                    int opcaoTUm;\par
+                    opcaoTUm = entrada.nextInt();\par
+ \par
+                    if (opcaoTUm == 2) \{\par
+                        System.out.println("Reiniciar programa.");\par
+                       \par
+                    \} else \{\par
+                        System.out.println("Qual o termo a21 da matriz?");\par
+ \par
+                        double mtxtDoisUm;\par
+                        mtxtDoisUm = entrada.nextInt();\par
+ \par
+                        System.out.println("Qual o termo a22 da matriz?");\par
+ \par
+                        double mtxtDoisDois;\par
+                        mtxtDoisDois = entrada.nextInt();\par
+ \par
+                        System.out.println("Qual o termo a23 da matriz?");\par
+ \par
+                        double mtxtDoisTres;\par
+                        mtxtDoisTres = entrada.nextInt();\par
+ \par
+                        System.out.println("A segunda linha da matriz \'e9 [" + mtxtDoisUm + " " + mtxtDoisDois + " " + mtxtDoisTres + "]?");\par
+                        System.out.println("Se a linha acima estiver certa, digite 1. Caso n\'e3o, digite 2.");\par
+ \par
+                        int opcaoTDois;\par
+                        opcaoTDois = entrada.nextInt();\par
+ \par
+                        if (opcaoTDois == 2) \{\par
+                            System.out.println("Reiniciar programa.");\par
+                           \par
+                        \} else \{\par
+                            System.out.println("Qual o termo a31 da matriz?");\par
+                            double mtxtTresUm;\par
+                            mtxtTresUm = entrada.nextInt();\par
+ \par
+                            System.out.println("Qual o termo a32 da matriz?");\par
+ \par
+                            double mtxtTresDois;\par
+                            mtxtTresDois = entrada.nextInt();\par
+ \par
+                            System.out.println("Qual o termo a33 da matriz?");\par
+ \par
+                            double mtxtTresTres;\par
+                            mtxtTresTres = entrada.nextInt();\par
+                           \par
+                            System.out.println("A terceira linha da matriz \'e9 [" + mtxtTresUm + " " + mtxtTresDois + " " + mtxtTresTres + "]?");\par
+                            System.out.println("Se a linha acima estiver certa, digite 1. Caso n\'e3o, digite 2.");\par
+                           \par
+                            int opcaoTTres;\par
+                            opcaoTTres = entrada.nextInt();\par
+                           \par
+                            if (opcaoTTres == 2)\{\par
+                                System.out.println("Reiniciar programa.");\par
+                               \par
+                            \} else \{\par
+                               \par
+                                System.out.println("A matriz 3x3 escolhida \'e9 a matriz [" + mtxtUmUm + " " + mtxtUmDois + " " + mtxtUmTres + "]");\par
+                                System.out.println("                                  [" + mtxtDoisUm + " " + mtxtDoisDois + " " + mtxtDoisTres + "]");\par
+                                System.out.println("                                  [" + mtxtTresUm + " " + mtxtTresDois + " " + mtxtTresTres + "].");\par
+                               \par
+                                double determinanteTxTPrimaria1;\par
+                                determinanteTxTPrimaria1 = (mtxtUmUm + mtxtDoisDois + mtxtTresTres);\par
+                               \par
+                                double determinanteTxTPrimaria2;\par
+                                determinanteTxTPrimaria2 = (mtxtUmDois + mtxtDoisTres + mtxtTresUm);\par
+                               \par
+                                double determinanteTxTPrimaria3;\par
+                                determinanteTxTPrimaria3 = (mtxtUmTres + mtxtDoisUm + mtxtTresDois);\par
+                               \par
+                                double determinanteTxTPrimariaFinal;\par
+                                determinanteTxTPrimariaFinal = (determinanteTxTPrimaria1 + determinanteTxTPrimaria2 + determinanteTxTPrimaria3);\par
+                               \par
+                                double determinanteTxTSecundaria1;\par
+                                determinanteTxTSecundaria1 = (mtxtTresUm + mtxtDoisDois + mtxtUmTres);\par
+                               \par
+                                double determinanteTxTSecundaria2;\par
+                                determinanteTxTSecundaria2 = (mtxtDoisUm + mtxtUmDois + mtxtTresTres);\par
+                               \par
+                                double determinanteTxTSecundaria3;\par
+                                determinanteTxTSecundaria3 = (mtxtUmUm + mtxtTresDois + mtxtDoisTres);\par
+                               \par
+                                double determinanteTxTSecundariaFinal;\par
+                                determinanteTxTSecundariaFinal = (determinanteTxTSecundaria1 + determinanteTxTSecundaria2 + determinanteTxTSecundaria3);\par
+                               \par
+                                double determinanteTxTFinal;\par
+                                determinanteTxTFinal = (determinanteTxTPrimariaFinal - determinanteTxTSecundariaFinal);\par
+                               \par
+                                System.out.println("A determinante da matriz 3x3 escolhida \'e9 " + determinanteTxTFinal + ".");\par
+                            \}\par
+                        \}\par
+ \par
+                    \}\par
+                \}\par
+            \}\par
+        \}\par
+    \}\par
+\}\par
+}
+ 

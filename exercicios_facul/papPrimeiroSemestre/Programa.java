@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+class Programa {
+    public static void main(String[] args){
+
+    //Scanner kb = new Scanner(System.in);
+    //Matriz mat22 = new Matriz();
+    Menu opc = new Menu();
+
+    opc.escolheOpcao();
+
+
+
+
+
+
+
+
+
+    //  mat22.mat2x2[0][0]= 1;
+    // mat22.mat2x2[0][1] = 2;
+    // mat22.mat2x2[1][0] = 3;
+    //mat22.mat2x2[1][1] = 4;
+
+        // mat22.mostraMatrizes();
+    }
+}
