@@ -459,6 +459,8 @@ public class Matriz{
 			System.out.println();
 		}
 	}
+
+
     // FIM DO MÉTODO determinanteMatriz
 
 } // FIM DA CLASSE PrincipalMatriz
