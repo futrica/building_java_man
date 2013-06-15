@@ -1,0 +1,7 @@
+Comum;30;0.05
+Carambola;150;0.07
+Comum;100;0.05
+Olho de Gato;50;0.10
+Espelhada;200;0.10
+Carambola;150;0.07
+Bolões;80;0.25
