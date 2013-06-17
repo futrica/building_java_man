@@ -22,7 +22,10 @@ public class Caelum_funcionarios {
 
 
             System.out.println("excluindo");
-                        fun.displayEmpregados();
+            fun.displayEmpregados();
+            
+            System.out.println(Funcionario.getIdentificador());
+                       
     }
 }
 
