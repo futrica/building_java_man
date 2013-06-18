@@ -1,11 +1,11 @@
 package banco;
 
 public class Conta {
-    private double saldo;
+    protected double saldo;
     
-    Conta(double saldo){
-        saldo = this.saldo;
-    }
+    //Conta(double saldo){
+    //    saldo = this.saldo;
+    //}
     
     //public void setSaldo(double saldo){
     //    saldo = this.saldo;

@@ -1,13 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package banco;
 
-/**
- *
- * @author root
- */
 public class ContaPoupanca extends Conta{
     
+    public void atualiza(double taxa){ //atualiza a conta de acordo com valor fornecido
+        saldo += saldo * 3* taxa;
+    }
 }
