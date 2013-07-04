@@ -1,4 +1,5 @@
-package banco;
+package br.futrica.banco.conta;
+
 
 public class ContaCorrente extends Conta implements Tributavel {
     

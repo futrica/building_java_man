@@ -1,4 +1,9 @@
-package banco;
+package br.futrica.banco;
+
+import br.futrica.banco.conta.Conta;
+import br.futrica.banco.conta.ContaCorrente;
+import br.futrica.banco.conta.ContaPoupanca;
+
 
 public class Banco {
 
@@ -35,11 +40,23 @@ public class Banco {
     	
     	
     	ContaCorrente cc = new ContaCorrente();
-    	cc.deposita(100);
-    	System.out.println(cc.calculaTributos());
+    	cc.deposita(-1100);
     	
-    	Tributavel t = cc;
-    	System.out.println(t.calculaTributos());
+    	Conta cp = new ContaPoupanca();
+    	
+    	try {
+        	cp.deposita(-100);			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			System.out.println("Você depositou um valor inválido!");
+		}
+
+    	//System.out.println(cc.calculaTributos());
+    	
+    	//Tributavel t = cc;
+    	//System.out.println(t.calculaTributos());
+    	System.out.println(cc.getSaldo());
+    	System.out.println(cp.getSaldo());
     	
     }
 }

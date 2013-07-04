@@ -1,4 +1,4 @@
-package banco;
+package br.futrica.banco.conta;
 
 public abstract class Conta {
     protected double saldo;
@@ -15,8 +15,8 @@ public abstract class Conta {
         return this.saldo;
     }
     
-    public void deposita(double valor){
-        this.saldo += valor;
+    public void deposita(double valor) {
+        this.saldo += valor;       
     }  
     
     public void saca(double valor ){

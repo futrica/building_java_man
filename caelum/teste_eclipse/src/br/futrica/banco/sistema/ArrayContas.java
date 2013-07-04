@@ -1,4 +1,7 @@
-package banco;
+package br.futrica.banco.sistema;
+
+import br.futrica.banco.conta.Conta;
+
 
 public class ArrayContas {
     private int nElements = 0;
