@@ -1,3 +1,9 @@
+/**
+ * Método responsável em moldar um classe de um banco
+ * 
+ * @author futrica
+ */
+
 package br.futrica.banco.conta;
 
 public abstract class Conta {
@@ -10,6 +16,11 @@ public abstract class Conta {
     //public void setSaldo(double saldo){
     //    saldo = this.saldo;
     //}
+    
+    /**
+     * Método que retorna o saldo da conta
+     * @return saldo da conta
+     */
     
     public double getSaldo(){
         return this.saldo;
