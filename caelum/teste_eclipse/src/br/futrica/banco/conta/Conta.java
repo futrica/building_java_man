@@ -8,6 +8,7 @@ package br.futrica.banco.conta;
 
 public abstract class Conta {
     protected double saldo;
+    private int numero;
     
     //Conta(double saldo){
     //    saldo = this.saldo;
@@ -37,5 +38,24 @@ public abstract class Conta {
     public void atualiza(double taxa){ //atualiza a conta de acordo com valor fornecido
         this.saldo += saldo * taxa;
     }
+    
+    @Override
+    public String toString() {
+    	return "conta corrente";
+    }
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		Conta outraConta = (Conta) obj;
+		return this.numero == outraConta.numero;
+	}
     
 }
