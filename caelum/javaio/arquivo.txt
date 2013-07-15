@@ -1,0 +1,2 @@
+coisas no arquivo para ler 
+outra linha para ler
