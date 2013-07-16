@@ -1,6 +1,7 @@
 package br.futrica.banco;
 
 import java.io.PrintStream;
+import java.util.*;
 
 import br.futrica.banco.conta.Conta;
 import br.futrica.banco.conta.ContaCorrente;
@@ -66,16 +67,16 @@ public class Banco {
     	
     	
         //Conta conta = new Conta();
-        Conta cc = new ContaCorrente();
+        //Conta cc = new ContaCorrente();
         //System.out.println(cc);
-        cc.setNumero(1);
+       // cc.setNumero(1);
         
-        Conta cc1 = new ContaCorrente();
-        cc.setNumero(1);
+       // Conta cc1 = new ContaCorrente();
+        //cc.setNumero(1);
         
-        if(cc.equals(cc1)){
-        	System.out.println("iguais");
-        }
+        //if(cc.equals(cc1)){
+        //	System.out.println("iguais");
+        //}
         //Conta cp = new ContaPoupanca();
         
         //ArrayContas ar;
@@ -123,8 +124,59 @@ public class Banco {
     	//System.out.println(t.calculaTributos());
     	//System.out.println(cc.getSaldo());
     	//System.out.println(cp.getSaldo());
-    	
+        
+        
+        
+        
+        //collections 
+        List<ContaPoupanca> contas = new LinkedList<>();
+        
+        ContaPoupanca c1 = new ContaPoupanca();
+        c1.setNumero(1973);
+        c1.setNome("alan");
+        contas.add(c1);
+        
+        ContaPoupanca c2 = new ContaPoupanca();
+        c2.setNumero(1462);
+        c2.setNome("balan");
+        contas.add(c2);
+        
+        ContaPoupanca c3 = new ContaPoupanca();
+        c3.setNumero(1854);
+        c3.setNome("calan");
+        contas.add(c3);
+        
+        for (int i = 0; i < contas.size(); i++) {
+        	Conta atual = contas.get(i);
+        	System.out.println("numero: " + atual.getNome());
+        }
+
+    
+        Collections.sort(contas);
+
+        for (int i = 0; i < contas.size(); i++) {
+        	Conta atual = contas.get(i);
+        	System.out.println("numero: " + atual.getNome());
+        }
+        
+        //Collections.reverse(contas);
+
+        //for (int i = 0; i < contas.size(); i++) {
+        //	Conta atual = contas.get(i);
+        //	System.out.println("numero: " + atual.getNumero());
+        //}
+        
+        
+        //for (int i = 0; i < 10; i ++){
+        //	ContaPoupanca atual = new ContaPoupanca();
+        //	Random rd = new Random();
+        //	atual.setNumero(rd.nextInt(9999));
+        //	contas.add(atual);
+        //}
+        
+        //for (int i = 0; i < contas.size(); i++) {
+        //	Conta atual = contas.get(i);
+       // 	System.out.println("numero: " + atual.getNumero());
+        //}
     }
-
-
 }

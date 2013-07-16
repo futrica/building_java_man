@@ -8,7 +8,8 @@ package br.futrica.banco.conta;
 
 public abstract class Conta {
     protected double saldo;
-    private int numero;
+    protected int numero;
+    protected String nome;
     
     //Conta(double saldo){
     //    saldo = this.saldo;
@@ -56,6 +57,14 @@ public abstract class Conta {
 	public boolean equals(Object obj) {
 		Conta outraConta = (Conta) obj;
 		return this.numero == outraConta.numero;
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
     
 }
