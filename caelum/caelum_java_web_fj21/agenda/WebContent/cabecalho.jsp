@@ -13,7 +13,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<img src="http://www.logotipo.pt/blog/wp-content/uploads/2010/09/rolling.jpg" />
+<img src="http://e.cdn-hardware.com.br/static/20110119/html5-logo-256.png">
 <h2>Agenda de Contatos do Futrica</h2>
 <hr />
 
