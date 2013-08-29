@@ -7,7 +7,7 @@ Formulário para alteração de contatos:<br/>
 
 <form action="mvc" method="POST">
 	Id: <input type="text" name="id"/><br/>
-	Nome: <input type="text" name="nome"  /><br/>
+	Nome: <input type="text" name="nome" text="${contato.nome}"/><br/>
 	E-mail: <input type="text" name="email"/><br/>
 	Endereço: <input type="text" name="endereco"/><br/>
 	Data de Nascimento: <caelum:campoData id="dataNascimento" />
