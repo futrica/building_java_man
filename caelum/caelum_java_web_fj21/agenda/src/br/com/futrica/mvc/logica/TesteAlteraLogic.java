@@ -13,34 +13,19 @@ import br.com.futrica.agenda.modelo.Contato;
 
 public class TesteAlteraLogic implements Logica {
 	
-	public void executa(HttpServletRequest request, HttpServletResponse response)
-			throws Exception {
-		
-		
-		
-		//arrumar o método para busca o contato
-		
-		
-		
-		Contato contato = new Contato();
-		long id = Long.parseLong(request.getParameter("id"));
-		
-		contato.setId(id);
-		contato.setNome(request.getParameter("nome"));
-		contato.setEndereco(request.getParameter("endereco"));
-		contato.setEmail(request.getParameter("email"));
-		
-		//Converte a data de String para Calendar
-		String dataEmTexto = request.getParameter("dataNascimento");
-		
-		Date date = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
-		Calendar dataNascimento = Calendar.getInstance();
-		dataNascimento.setTime(date);
-		contato.setDataNascimento(dataNascimento);
-		
-		RequestDispatcher rd = request.getRequestDispatcher("/teste-altera-mvc.jsp");
-		rd.forward(request, response);
 
+	    public void executa(HttpServletRequest req, HttpServletResponse res) throws Exception {  
+	        Long id = Long.parseLong(req.getParameter("id"));  
+	        ContatoDao dao = new ContatoDao();  
+	        Contato contato = dao.pesquisar(id);  
+	        req.setAttribute("nome", contato.getNome());  
+	        req.setAttribute("email", contato.getEmail());  
+	        req.setAttribute("endereco", contato.getEndereco());  
+	        req.setAttribute("nascimento", contato.getDataNascimento());  
+	  
+	        RequestDispatcher rd = req.getRequestDispatcher("testa-altera-mvc.jsp");  
+	        rd.forward(req, res);  
+	    } 
 		
-	}
 }
+

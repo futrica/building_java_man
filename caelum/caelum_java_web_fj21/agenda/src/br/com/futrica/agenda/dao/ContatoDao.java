@@ -115,7 +115,7 @@ public class ContatoDao {
 		
 	}
 	
-	public Contato pesquisar(int id) {
+	public Contato pesquisar(long id) {
 		try{
 			Contato contato = new Contato();
 			PreparedStatement stmt = this.connection.prepareStatement("select * from contatos where id = " +id);

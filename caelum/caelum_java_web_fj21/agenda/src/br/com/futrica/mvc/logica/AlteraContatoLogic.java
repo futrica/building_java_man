@@ -17,26 +17,26 @@ public class AlteraContatoLogic implements Logica{
 			throws Exception {
 		
 		Contato contato = new Contato();
-		long id = Long.parseLong(request.getParameter("id"));
+		long id = Long.parseLong(request.getParameter("id"));		
 		
 		contato.setId(id);
-		contato.setNome(request.getParameter("nome"));
-		contato.setEndereco(request.getParameter("endereco"));
-		contato.setEmail(request.getParameter("email"));
 		
-		//Converte a data de String para Calendar
-		String dataEmTexto = request.getParameter("dataNascimento");
+			contato.setNome(request.getParameter("nome"));
+			contato.setEndereco(request.getParameter("endereco"));
+			contato.setEmail(request.getParameter("email"));
 		
-		Date date = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
-		Calendar dataNascimento = Calendar.getInstance();
-		dataNascimento.setTime(date);
-		contato.setDataNascimento(dataNascimento);
-		ContatoDao dao = new ContatoDao();
-		dao.altera(contato);
+			//Converte a data de String para Calendar
+			String dataEmTexto = request.getParameter("dataNascimento");
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/lista-contatos-elegante.jsp");
-		rd.forward(request, response);
-		System.out.println("Alterando contato ..." + contato.getNome());
+			Date date = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
+			Calendar dataNascimento = Calendar.getInstance();
+			dataNascimento.setTime(date);
+			contato.setDataNascimento(dataNascimento);
+			ContatoDao dao = new ContatoDao();
+			dao.altera(contato);
+	
 		
-	}
+			RequestDispatcher rd = request.getRequestDispatcher("/lista-contatos-elegante.jsp");
+			rd.forward(request, response);
+		}
 }

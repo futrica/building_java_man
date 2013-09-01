@@ -5,14 +5,14 @@
 
 Formulário para alteração de contatos:<br/>
 
-<form action="mvc" method="POST">
-	Id: <input type="text" name="id"/><br/>
-	Nome: <input type="text" name="nome" text="${contato.nome}"/><br/>
-	E-mail: <input type="text" name="email"/><br/>
-	Endereço: <input type="text" name="endereco"/><br/>
-	Data de Nascimento: <caelum:campoData id="dataNascimento" />
-	<input type="hidden" name="logica" value="AlteraContatoLogic"/>
-	<input type="submit" value="Enviar"/>
-</form>
+<form action="mvc" method="POST">  
+    Id: <input  type="text" name="id" value="${param.id}" readonly/><br/>  
+    Nome: <input type="text" name="nome" value="${requestScope.nome}"/><br/>  
+    E-mail: <input type="text" name="email" value="${requestScope.email}"/><br/>  
+    Endereço: <input type="text" name="endereco" value="${requestScope.endereco}"/><br/>  
+    Data de nascimento: <input type="text" name="dataNascimento" value="${requestScope.nascimento}"/><br/>  
+    <input type="hidden" name="logica" value="AlteraContatoLogic"/>  
+    <input type="submit" value="Salvar"/>  
+</form>  
 
 <c:import url="rodape.jsp" />

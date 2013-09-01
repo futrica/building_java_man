@@ -1,4 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
@@ -44,7 +43,7 @@
                         	<a href="mvc?logica=RemoveContatoLogic&id=${contato.id}"> Deletar</a>  
 			           </td> 
 						<td>  
-                        	<a href="mvc?logica=AlteraContatoLogic&id=${contato.id}"> Alterar</a>  
+                        	<a href="mvc?logica=TesteAlteraLogic&id=${contato.id}"> Alterar</a>    
 			           </td> 
 					</tr>
 					
